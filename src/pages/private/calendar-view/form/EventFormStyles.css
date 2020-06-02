@@ -1,0 +1,41 @@
+.event-form-buttons {
+    margin-right: 8px;
+}
+
+.edit-form-buttons div div div {
+    display:flex;
+    flex-direction: row;
+}
+
+.edit-form-buttons button {
+    width: 49%;
+}
+
+.edit-form-buttons button:last-child {
+    margin-right: 0;
+}
+
+.confirm-delete-text {
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.topic-description-text {
+    height: 32px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    width: 100%;
+    display: inline-block;
+}
+
+.topic-description-text-first {
+    text-align: right;
+    width: 100%;
+    display: block;
+    padding-right: 7px;
+    color: rgba(0, 0, 0, 0.85) !important;
+    min-height: 32px;
+    font-size: 14px !important;
+}
