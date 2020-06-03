@@ -1,15 +1,9 @@
-const path = require('path');
 const express = require('express');
-const app = express();
-const publicPath = path.join(__dirname, '..');
-const port = process.env.PORT || 3000;
+const app = express()
+const PORT = process.env.PORT || 5000;
 
-app.use(express.static(publicPath));
-
-app.get('*', (req, res) => {
-   res.sendFile(path.join(publicPath, 'index.tsx'));
+app.use("*",(req, res) =>{
+    res.send("<h1>Welcome to your simple server! Awesome right</h1>");
 });
 
-app.listen(port, () => {
-   console.log('Server is up!');
-});
+app.listen(PORT,() => console.log(`hosting @${PORT}`));
