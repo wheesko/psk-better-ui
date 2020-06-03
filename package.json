@@ -53,10 +53,9 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "prestart": "npm run build",
     "start": "react-scripts start",
     "start:dev": "run-p start start:api",
-    "build": "npm run build",
+    "build": "react-scripts-build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:api": "node tools/apiServer.js",
