@@ -54,13 +54,10 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "node src/server/server.js",
-    "start:dev": "run-p start start:api",
-    "build": "tsc",
+    "start": "tsc && react-scripts start",
+    "build": "tsc && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start:api": "node tools/apiServer.js",
-    "prestart:api": "node tools/createMockDb.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
