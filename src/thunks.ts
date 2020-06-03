@@ -15,7 +15,6 @@ export const thunkLogin = (
 	loginRequest: LoginRequest): ThunkAction<void, AppState, null, Action<string>> => async dispatch => {
 	authenticationService.login(loginRequest).then(response => {
 		history.push('/profile');
-		console.log(response);
 		const decodedResponse = jwt.decode(response?.headers.authorization.replace('Bearer ', ''),
 			{ json: true });
 
@@ -27,7 +26,7 @@ export const thunkLogin = (
 			email: loginRequest.email,
 			loggedIn: true,
 			token: response?.headers.authorization.replace('Bearer ', ''),
-			refreshToken: response?.headers.refreshtoken.replace('Bearer ', ''),
+			refreshToken: '',
 			authority: decodedResponse!.role[0].authority,
 			role: { name: response?.data?.role, color: getRoleColor(response?.data?.role), roleGoals: [], id: 0 }, //TODO: fix role fetching with login
 			surname: response?.data.surname
