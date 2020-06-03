@@ -20,7 +20,7 @@ class RestService {
     constructor(config: RestServiceConfig) {
     	this.cancelTokenSource = config.cancelTokenSource;
     	this.axiosInstance = axios.create({
-    		baseURL: '/api',
+    		baseURL: 'https://psk-project.herokuapp.com/api',
     		cancelToken: this.cancelTokenSource.token,
     	});
 

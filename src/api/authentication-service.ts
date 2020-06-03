@@ -11,7 +11,7 @@ class AuthenticationService {
 	}
 
 	public login = (loginRequest: LoginRequest): Promise<AxiosResponse | null> => {
-		return this.restService.post<string>('/login', loginRequest, { baseURL: '' });
+		return this.restService.post<string>('/login', loginRequest, { baseURL: 'https://psk-project.herokuapp.com/' });
 	};
 
 	public getSession = (): Promise<void> => {
