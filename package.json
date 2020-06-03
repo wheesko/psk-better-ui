@@ -55,7 +55,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start:dev": "run-p start start:api",
-    "build": "react-scripts build",
+    "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:api": "node tools/apiServer.js",
