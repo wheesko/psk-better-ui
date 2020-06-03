@@ -53,7 +53,7 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm start",
     "start:dev": "run-p start start:api",
     "build": "tsc",
     "test": "react-scripts test",
